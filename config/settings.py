@@ -21,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent # Build paths inside the proje
 
 SECRET_KEY = os.environ.get('SECRET_KEY') # SECURITY WARNING: keep the secret key used in production secret!
 
-DEBUG = os.environ.get('DEBUG', False) == 'True'
+#DEBUG = os.environ.get('DEBUG', False) == 'True'
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1']
@@ -36,3 +37,5 @@ include(
 STATIC_URL = '/static/' # Static files (CSS, JavaScript, Images): https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' # Default primary key field type: https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+LOCALE_PATHS = ['movies/locale']
